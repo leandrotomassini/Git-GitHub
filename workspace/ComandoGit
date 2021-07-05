@@ -1,0 +1,175 @@
+git --version // Version de git
+git config --global user.email // Email del usuario
+git config --global user.name // Nombre del usuario
+git config --global -e // informacion de quien esta registrado
+git config --list // Ver todos los usuarios registrados
+ls -al // Listar todos los archivos con los permisos, y muestra la carpeta .git
+git init // Crea el repositorio local
+git status // Muestra que no fue registrado en el stage, y cualsi, tambien en que rama estamos
+git add . // Agrega todos los archivos al stage
+git commit -m "Primer commit" // Para crear un commit con un mensaje corto
+git checkout -- . // Regresa todo al estado del ultimo commit creado
+git add README.md // Agrega un archivo en particular al stage
+git log // Muestra todos los commits ordenados del mas reciente al mas viejo
+git add *.png // Agrega al stage todos los archivos .png
+git add css/ // Agrega todos los archivos dentro de la carpeta css
+git add -A // Agrega todos los archivos que fueron modificados al stage
+git reset *.xml // Quita del stage los archivos .xml
+git add "*.txt" // Agrega todos los .txt del proyecto
+git add *.txt // Agrega todos los .txt en el directorio actual
+git add --all // Agrega todos los archivos modificados
+git add <Lista de archivos> // Agrega los archivos mencionados
+git add pdfs/*.pdf // Agrega todos los archivos dentro de la careta con esa extencion
+git log --oneline // Muestra commits en un solo reglon cada uno
+git log --oneline --decorate --all --graph  // Muestra toda la informacion con el dibujo de ramas
+-- // Es porque viene una palabra
+- // Interpretar cada una de las letras como comandos independientes
+git status -s // Solo aparecen archivos modificados
+git status -s -b // Muestra solos archivos modificados con las ramas
+git config --global alias.lg "log --oneline --decorate --all --graph" // Crear alias de log
+git config --global alias.s "status -s -b" // Crear alias del status
+git config --global -l // Forma segura de leer los alias
+git config --global -e // Forma insegura de leer los alias
+git diff // Cambios que hubo en el archivo entre el commit anterior y el momento actual
+git diff --staged // Muestra cambios desde el ultimo commit teniendo en cuenta lo que hay en stage
+git reset HEAD README.md // Quito README.md del stage
+git checkout -- README.md // Agrego README.md al stage
+git commit -am "README actualo" // Agregar al stage y hacer el commit
+git commit --amend -m "Actualizamos el readme" // Se arregla el mensaje del ultimo commit
+git reset --soft HEAD^ // Meter los cambios en el commit pasado, luego hacer commit
+git commit // Agregar un mensaje multilinea en un commit
+git reset --soft numerocommit // Para regresar a un punto de la historia
+git reset --mixed numerocommit // Quita del stage todo lo que halla en los commit arriba de este
+git reset --hard numerocommit // Perdimos los cambios de todo lo que habia ariiba
+git reflog // Muestra registro de todo lo sucedido en el repositorio
+git reset --hard hashcommit // Para volver a un punto del registro en reflog
+git mv nombre1 nombre2 // Cambia nombre al archivo
+git rm nombrearchivo // Borra un archivo
+.gitignore // Archivo creado por el usuario con todos los archivos que quiero que git ignore
+git branch nombreRama // Crear una rama
+git branch // Muestra todas las ramas
+git checkout nombreRama // Cambiar de rama
+git diff ramaNombre master // Para saber diferencias entre nombreRama y rama master
+git checkout master // Apuntar el head a rama master
+git merge ramaNombre // Desde master uno la ramaNombre a la master
+git branch -d nombreRama // Elimina la rama
+git branch -b nombreRama // Crear una rama, y se mueve a ella
+git tag nombreTag // Crear un tag para indicar la version
+git tag // Ver todos los tags
+git tag -d nombreTag // Borra un tag
+git tag -a v1.0.0 -m "Version 1.0.0" // Crear tag con version y mensaje
+git tag -a v0.1.0 hashCommit -m "Version alfa" // Crear tag en un commit especifico
+git show v0.1.0 // Muestra mensaje de un tag
+git stash // Salva todo el directorio que estoy trabajando actualmente
+git stash list // Muestra todo el trabajo en el stage
+git stash pop // Extrae de stage los cambios pendientes, y elimina de la lista de stahsh
+git stash drop // Eliminar el ultimo stage
+git show stash // Muestra toda la informacion de los stage
+git stash clear // Borra todos los stage
+REBASE // Es para actualizar una rama
+git checkout ramaDos // Me muevo a rama dos
+git checkout idCommit archivo // Devuelve un archivo al estado del commit
+git rebase master // Rama que quiero usar para mover
+Squall // Cobinar dos commits
+git rebase -i head~4 // Combina el head con los 4 commits de abajo
+git reset HEAD^ // Desase el ultimo commit
+git remote add origin url // Para agregar un repositorio a github
+git remote -v // Me dice que tengo enlazado a remote
+git push -u origin master // Para subir el repositorio a github
+README.md // Contiene la descripcion de abajo, el markdown
+git push --tags // Sube los tags de versiones a github
+git pull origin master // Actualiza y descarga en local hace merge los cambios en github
+git clone urlRepositorio nombreCarpeta// Descargar un repositorio de github
+git fetch // Solo actualiza los cambios que hallan sucedido en github, hacerlo antes de subir
+
+
+
+
+Markdown:
+# h1
+## h2
+### h3
+#### h4
+##### h5
+*Cursiva*
+_Cursiva_
+**negrita**
+> Autor
+1. item 
+* subitem
+![altImgagen](urlImagen)
+[Ir a la imagen](urlImagen)
+markdowntutorial.com
+https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf
+webpagefx.com/tools/emoji-cheat-sheet/
+
+ssh-keygen -t rsa -C "miCorreo"  // Genera llave privada
+ssh -T git@github.com // Conectar el dispositivo via SSH
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
